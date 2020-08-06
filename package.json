@@ -1,0 +1,31 @@
+{
+  "name": "@rxfree4me/monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo housing the codebase for all the fun goodness driving RxFree4Me",
+  "author": "Branden Dane <Branden@DaneTheory.com> (DaneTheory.com)",
+  "homepage": "https://github.com/DaneTheory/RxFree4Me-Redux#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaneTheory/RxFree4Me-Redux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DaneTheory/RxFree4Me-Redux/issues"
+  },
+  "license": "MIT",
+  "private": true,
+  "installConfig": {
+    "pnp": true
+  },
+  "engines": {
+    "node": "12.x" 
+  },
+  "workspaces": [
+    "workspaces/Services/*",
+    "workspaces/Apps/*",
+    "workspaces/Constants/*",
+    "workspaces/Common/*",
+    "workspaces/Configs/*",
+    "workspaces/Scripts/*",
+    "workspaces/Sandbox/*"
+  ]
+}
