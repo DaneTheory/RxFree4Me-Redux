@@ -16,8 +16,11 @@
   "installConfig": {
     "pnp": true
   },
+  "ntl": {
+    "runner": "yarn"
+  },
   "engines": {
-    "node": "12.x" 
+    "node": "12.x"
   },
   "workspaces": [
     "workspaces/Services/*",
@@ -27,5 +30,24 @@
     "workspaces/Configs/*",
     "workspaces/Scripts/*",
     "workspaces/Sandbox/*"
-  ]
+  ],
+  "scripts": {
+    "bootstrap": "ultra --pretty --raw oao bootstrap",
+    "clean": "ultra --pretty oao clean",
+    "status": "ultra --pretty oao status",
+    "docs": "ultra --pretty bolt doc",
+    "check": "ultra --pretty bolt check",
+    "build": "ultra --pretty bolt build",
+    "monit": "ultra --monitor",
+    "info": "ultra --info",
+    "tasks": "ntl -A -s Infinity --exclude tasks",
+    "nps": "nps"
+  },
+  "devDependencies": {
+    "bolt": "^0.24.5",
+    "nps": "^5.10.0",
+    "ntl": "^5.1.0",
+    "oao": "^2.0.0",
+    "ultra-runner": "^3.5.0"
+  }
 }
